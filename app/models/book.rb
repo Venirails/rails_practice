@@ -1,6 +1,6 @@
 class Book < ActiveRecord::Base
 	before_save :merge_the_names
-	after_destroy :write_to_log_file
+
 	
 	def merge_the_names
 		self.book_name = self.book_name + " By " + self.author
